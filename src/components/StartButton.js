@@ -10,12 +10,20 @@ const StartButton = ({ startHandler }) => {
   }
 
   return (
-    <button
-      onClick={clickHandler}
-      className='mt-4 bg-pink-600 active:bg-pink-900 hover:bg-pink-700 border-4 border-solid border-gray-600 rounded-full cursor-pointer inline-block size-20 text-white font-bold shadow-[inset_0_-2px_0_3px_#be185d,0_5px_5px_rgba(3,25,41,0.17),inset_0_15px_rgba(255,255,255,0.25)] hover:shadow-[inset_0_-2px_0_3px_#9d174d,0_5px_5px_rgba(0,0,0,0.17),inset_0_15px_rgba(255,255,255,0.32)]'
-    >
-      PLAY
-    </button>
+    <div className='bg-gradient-to-b from-[#344ABA] from-[0%] to-[rgba(0,20,121,0.83)] to-[100%]
+      shadow-inner shadow-blue-400 w-[275px] h-[200px] md:w-[300px] rounded-[72px]
+      flex flex-col items-center justify-center p-0 m-0'>
+      <p
+        className='absolute font-mouseMemoirs text-6xl font-extrabold top-[5px]
+        bg-gradient-to-b from-[#67B6FF] to-[#FFFFFF] text-transparent bg-clip-text drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]'
+      >
+        Hangman
+      </p>
+      <button
+        onClick={clickHandler}
+        className='mt-4 rounded-full cursor-pointer bg-play bg-center bg-no-repeat bg-cover w-20 h-20 hover:bg-play-hover'
+      />
+    </div>
   )
 }
 

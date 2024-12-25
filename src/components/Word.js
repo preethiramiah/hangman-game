@@ -29,10 +29,14 @@ const Word = ({ word, setInCorrectCount, letters, setLetters, isSuccess, isFailu
 
   return (
     <>
-      {!isFailure && <div className="flex justify-center gap-2 h-10">
+      {!isFailure && <div className='flex justify-center gap-2 flex-wrap'>
         {
           letters.map((letter, index) => {
-            return <span className='font-winterMinie text-3xl text-white w-7 border-b-2 border-gray-300 text-center' key={`letter${index}`}>{letter}</span>
+            return (
+              <div className='w-[52px] h-[60px] bg-blue-600 rounded-2xl flex items-center justify-center' key={`letter${index}`}>
+                <span className='font-winterMinie text-3xl text-white text-center'>{letter}</span>
+              </div>
+            )
           })
         }
       </div>}

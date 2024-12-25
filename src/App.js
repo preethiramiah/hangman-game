@@ -25,8 +25,8 @@ function App() {
   if (!words?.length) return <div>Loading</div>
 
   return (
-    <div className='flex justify-center'>
-      <div className='flex flex-col items-center gap-10 p-10 w-svw h-dvh bg-gradient-to-b from-slate-500 via-zinc-400  to-stone-500'>
+    <div className='flex justify-center bg-mobile-background md:bg-tablet-background lg:bg-desktop-background bg-cover bg-center h-screen'>
+      <div className='flex flex-col items-center gap-8 p-10 w-svw h-dvh'>
         <StartButton startHandler={startNewGame} />
         {
           currentWord && (

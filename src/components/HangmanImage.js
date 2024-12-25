@@ -21,20 +21,15 @@ const HangmanImage = ({ inCorrectCount, isSuccess, isFailure, currentWord }) => 
   if (isSuccess) {
     return (
       <>
-        <canvas
-          id="confettiCanvas"
-          class="fixed top-0 left-0 w-full h-full pointer-events-none"
-        >
-        </canvas>
-        <p className='text-3xl font-extrabold text-yellow-900'>WELL DONE!</p>
-        <img src={Success} alt='Success' />
+        <p className='font-grandRainbow text-3xl font-extrabold text-white'>WELL DONE!</p>
+        <img src={Success} alt='Success' className='size-64' />
       </>
     )
   }
 
   if (!inCorrectCount) {
     return (
-      <p className='h-52 font-grandRainbow text-3xl text-indigo-900 pt-16'>Let's see how this goes!!!</p>
+      <p className='h-52 font-grandRainbow text-3xl text-white pt-16'>Let's see how this goes!!!</p>
     )
   }
 
@@ -45,7 +40,12 @@ const HangmanImage = ({ inCorrectCount, isSuccess, isFailure, currentWord }) => 
         alt={`Incorrect attempt: ${inCorrectCount}`}
         className='h-52'
       />
-      {isFailure && <p className='text-3xl font-extrabold text-yellow-900'>{currentWord.toUpperCase()}</p>}
+      {isFailure && (
+        <p className='bg-gradient-to-b from-[#344ABA] from-[0%] to-[rgba(0,20,121,0.83)] to-[100%] p-5
+          rounded-3xl font-grandRainbow text-4xl font-extrabold text-white'>
+          {currentWord.toUpperCase()}
+        </p>
+      )}
     </>
   )
 }
